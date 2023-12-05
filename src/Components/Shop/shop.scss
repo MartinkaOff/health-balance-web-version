@@ -1,0 +1,172 @@
+@import 'src/assets/style/variables';
+
+.shop-cards {
+  display: flex;
+  margin: 0 -5px -20px;
+  flex-wrap: wrap;
+
+  @media(max-width: 500px) {
+    justify-content: center;
+  }
+}
+
+.shop-card {
+  width: 256px;
+  display: block;
+  color: $colorMain;
+  // flex: 0 1 50%;
+  padding: 0 10px;
+  margin: 0 0 20px 0;
+
+  @media(max-width: 768px) {
+    width: 200px;
+  }
+
+  &__container {
+    background: $backgroundBlock;
+    border-radius: 10px;
+  }
+
+  &__row {
+    padding: 0 8px 16px 8px;
+  }
+
+  &__img {
+    display: block;
+    height: 166px;
+    margin: 0 0 20px 0;
+    // padding: 17px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px 10px 0 0;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-size: 15px;
+    line-height: 120%;
+    color: $colorMain;
+    margin: 0 0 40px 0;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__footer-column {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-reward {
+    margin: 0 6px 0 0;
+    width: 15px;
+    height: 15px;
+  }
+
+  &__count-reward {
+    font-size: 15px;
+
+    color: #f5f5f5;
+  }
+
+  &__count-product {
+    font-size: 10px;
+    color: #555555;
+
+    margin: 0 13px 0 0;
+  }
+
+  &__icon-add {
+    width: 20px;
+    height: 20px;
+    background: $yellowColor;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s all ease;
+
+    img {
+      width: 14px;
+      height: 14px;
+      transition: 0.3s all ease;
+    }
+
+    // &::after, &::before {
+    //   position: absolute;
+    //   content: "";
+    //   display: inline-block;
+    //   background: #000;
+    //   left: 50%;
+    //   top: 50%;
+    //   transform: translate(-50%, -50%);
+    // }
+
+    // &::before {
+    //   width: 14px;
+    //   height: 2px;
+    // }
+
+    // &::after {
+    //   width: 2px;
+    //   height: 14px;
+    // }
+  }
+}
+
+.shop-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin: 0 9px 0 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+  }
+
+  &__img-before {
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    background: #cacaca;
+    border-radius: 50%;
+
+    &.active {
+      background: $yellowColor;
+    }
+  }
+
+  &__purchases {
+    margin: 0 28px 0 0;
+    text-transform: uppercase;
+  }
+}
+
+.shop-button {
+  height: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $backgroundBlock;
+  border-radius: 8px;
+  gap: 10px;
+  width: 100%;
+}

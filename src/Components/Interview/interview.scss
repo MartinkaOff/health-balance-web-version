@@ -1,0 +1,27 @@
+.interview-wrapper {
+  &__close {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__order {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  &__order div {
+    width: 23%;
+    height: 2px;
+    background-color: #adadad;
+    border-radius: 15px;
+  }
+}
+.question-wrapper {
+  p {
+    font-size: 25px;
+    margin-bottom: 23px;
+    margin-top: 40vh;
+  }
+  &__ button {
+    margin-top: 10vh;
+  }
+}

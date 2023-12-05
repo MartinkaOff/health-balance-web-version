@@ -1,0 +1,104 @@
+@import "src/assets/style/variables";
+
+.creating-interesting {
+  padding-top: 50px;
+  &__container {
+    margin: 0 -16px;
+  }
+
+  &__fields {
+    margin: 0 0 58px 0;
+  }
+
+  &__field {
+    padding: 20px 16px;
+    background: transparent;
+    width: 100%;
+    border-top: 1px solid #202020;
+    font-size: 13px;
+    display: block;
+    color: $colorMain;
+    outline: none;
+    font-family: inherit;
+    &::placeholder {
+      color: $colorMain;
+    }
+  }
+
+  &__row {
+    padding: 0 16px 20px 16px;
+    display: flex;
+    border-bottom: 1px solid #202020;
+    margin: 0 0 20px 0;
+  }
+
+  &__cover {
+    display: flex;
+    align-items: center;
+    margin: 0 25px 0 0;
+
+    img {
+      margin: 0 3px 0 0;
+    }
+  }
+  &__cover-image{
+    width: 100%;
+    object-fit: cover;
+    max-height: 250px;
+  }
+  input[type="file"] {
+    display:none;
+  }
+  input[type="file"] + label {
+    display: inline
+  }
+
+  &__category{
+    position: relative;
+    &:after, &:before{
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 8px;
+      background: $blueColor;
+      display: block;
+      pointer-events: none;
+    }
+    &:before{
+      right: -7px;
+      top: 3px;
+      transform: rotate(-45deg);
+    }
+    &:after{
+      right: -12px;
+      top: 3px;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__title{
+    margin: 0 0 20px 0;
+  }
+
+  &__calendar{
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  &__select-challenge{
+    margin: auto 16px 20px 16px;
+    max-width: 100%;
+  }
+  &__select-challenge-teams{
+    margin: auto 16px 20px 16px;
+    max-width: 100%;
+  }
+
+  &__push{
+    padding: 0 16px;
+    margin: 0 0 45px 0;
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}

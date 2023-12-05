@@ -1,0 +1,265 @@
+@import 'src/assets/style/variables';
+@import 'src/assets/style/mixins';
+
+.water-target {
+  background: $backgroundBlock;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: 343px;
+    height: 180px;
+    // padding: 20px;
+    margin: 0px -15px -30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__item {}
+}
+
+.fruit-target {
+  background: $backgroundBlock;
+  border-radius: 10px;
+  height: 100px;
+
+  &__container {
+    padding: 20px;
+    margin: 0px -15px -30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.habits-tracker-item {
+  font-size: 10px;
+  @include adaptive-value('padding-left', 15, 10, 1);
+  @include adaptive-value('padding-right', 15, 10, 1);
+  padding-top: 0;
+  padding-bottom: 0;
+  @include adaptive-value('margin-bottom', 30, 20, 1);
+  flex: 0 1 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+
+  &__data {
+    border: 0.682927px solid #fff;
+    font-weight: 500;
+    border-radius: 50%;
+    display: flex;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 3px 0;
+  }
+
+  &__value {
+    font-weight: 700;
+    text-align: center;
+
+    &_green {
+      color: $greenColor;
+    }
+
+    &_yellow {
+      color: #f4c119;
+    }
+
+    &_gray {
+      color: #999999;
+    }
+  }
+}
+
+.healthy-sleep {
+  background: $backgroundBlock;
+  border-radius: 10px;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px;
+    margin: 0 0 27px 0;
+  }
+
+  &__body {
+    padding: 0 17px 27px 17px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 31px 0;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      width: 18px;
+      height: 18px;
+      margin: 0 0 5px 0;
+    }
+  }
+
+  &__time {
+    font-weight: 500;
+    font-size: 10px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 13px;
+
+    span {
+      color: $greenColor;
+      margin: 0 0 0 2px;
+    }
+  }
+
+  &__border-dashed {
+    border: 1px dashed $colorMain;
+    flex: 1 1 auto;
+    margin: 0 12px;
+  }
+
+  &__days {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__circle {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0 0 5px 0;
+  }
+
+  &__day-text {
+    font-size: 13px;
+    color: #fff;
+
+    &_green {
+      color: $greenColor;
+    }
+
+    &_yellow {
+      color: #f4c119;
+    }
+
+    &_gray {
+      color: #999999;
+    }
+  }
+
+  &__icon-full {
+    height: 25px;
+    margin: 0 0 5px 0;
+  }
+}
+
+.day-statistic-wrapper {
+  width: 100%;
+  height: 102px;
+  background-color: #191919;
+  border-radius: 10px;
+  margin: 0 0 25px 0;
+  padding: 12px 0px 0px 19px;
+
+  &__title {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  &__stat {
+    display: flex;
+    margin-top: 27px;
+
+    img {
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+    }
+
+    div {
+      @include adaptive-value("margin-right", 24, 5, 1);
+      display: flex;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      align-items: center;
+    }
+  }
+}
+
+.swal-overlay {
+  background: rgb(0 0 0 / 30%);
+  backdrop-filter: blur(2px);
+}
+
+.swal-title:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.swal-title:first-child {
+  margin-top: 0;
+}
+
+.swal-title {
+  color: #191919;
+  font-weight: 700;
+  text-transform: none;
+  position: relative;
+  display: block;
+  padding: 67px 0 51px 0;
+  font-size: 20px;
+  line-height: normal;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.swal-footer {
+  margin: 0 0 26px 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.swal-button {
+  padding: 8px 12px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: $colorMain;
+  background: linear-gradient(180deg, #F29C47 0%, #D8AC19 100%);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.swal-button--cancel {
+  color: $backgroundBlock;
+  background: #D3D3D2;
+}
+
+.swal-button:focus {
+  outline: none;
+  box-shadow: none;
+}

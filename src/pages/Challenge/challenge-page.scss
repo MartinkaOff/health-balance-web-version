@@ -1,0 +1,89 @@
+@import 'src/assets/style/variables';
+
+.challenge-page {
+  padding: 0 0 84px 0;
+  position: relative;
+
+  &__after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__platform {
+    margin: 0 0 20px 0;
+  }
+
+  &__link {
+    margin: 0 0 40px 0;
+  }
+
+  &__active {
+    flex-wrap: wrap;
+    gap: 39px;
+    display: flex;
+    margin: 0 0 40px 0;
+  }
+
+  &__active-plug {
+    background: $backgroundBlock;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 113px;
+    font-size: 15px;
+    color: #ababab;
+    border-radius: 10px;
+  }
+
+  &__title {
+    margin: 0 0 40px 0;
+  }
+
+  &__title-block {
+    margin: 0 0 40px 0;
+  }
+
+  &__new-challenges {
+    position: relative;
+    opacity: 1;
+
+    &:not(:last-child) {
+      margin: 0 0 25px 0;
+    }
+  }
+
+  &__wrapper {
+    width: 1095px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      width: 690px;
+    }
+
+    @media (max-width: 500px) {
+      width: 344px;
+    }
+  }
+
+  &__active-wrapper {
+    gap: 39px;
+    width: 940px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      gap: 10px;
+      width: 690px;
+    }
+
+    @media (max-width: 500px) {
+      display: block;
+      width: 344px;
+    }
+  }
+}

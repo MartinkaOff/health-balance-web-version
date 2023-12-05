@@ -1,0 +1,283 @@
+@import "src/assets/style/variables";
+
+.lecture {
+  &__video {
+
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    &-run {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 20;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 0 20px 40px;
+      border-color: transparent transparent transparent #fff;
+    }
+  }
+}
+
+
+.task-lecture {
+  margin-left: 36px;
+  border-radius: 10px;
+  background: $backgroundBlock;
+  width: 365px;
+  height: 316px;
+
+  @media(max-width: 768px) {
+    width: 100%;
+    margin-left: auto;
+  }
+
+  &__head {
+    padding: 20px 15px 35px 15px;
+    border-bottom: 1px solid #202020;
+  }
+
+  &__title {
+    margin: 0 0 12px 0;
+    word-break: break-word;
+  }
+
+  &__text {
+    font-size: 13px;
+    line-height: 130%;
+    white-space: pre-line;
+    color: #919191;
+    word-break: break-word;
+  }
+
+  &__body {
+    padding: 20px 15px 25px 15px;
+  }
+
+  &__preview-photo {
+    margin: 0 0 30px 0;
+    height: 300px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__button-download {
+    margin: 0 0 22px 0;
+  }
+
+  &__button-execute {
+    margin: 0 auto;
+  }
+
+  &__field {
+    margin: 0 0 22px 0;
+  }
+
+  &__answers-options {
+    margin: 0 0 29px 0;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  input[type="file"]+label {
+    display: inline-flex;
+  }
+}
+
+.card-lecture {
+  position: relative;
+  color: #fff;
+  // width: 336px;
+
+  @media (max-width: 500px) {
+    display: flex;
+  }
+
+  &:not(:last-child) {
+    margin: 0 30px 26px 0;
+  }
+
+  // display: flex;
+  // justify-content: space-between;
+  gap: 14px;
+
+  &__plug {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: #191919;
+    font-size: 10px;
+    color: #8B8B8B;
+    padding: 4px 8px;
+    z-index: 2;
+    border-radius: 3px;
+  }
+
+  &__image {
+    flex: 0 0 166px;
+    height: 205px;
+    width: 348px;
+
+    @media (max-width: 768px) {
+      width: 324px;
+      height: 191px;
+    }
+
+    @media (max-width: 500px) {
+      width: 166px;
+      height: 89px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 17px;
+
+    @media (max-width: 500px) {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 120%;
+    flex: 1 1 auto;
+    margin: 0 0 15px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    word-break: break-word;
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    color: #919191;
+  }
+}
+
+.reward {
+  font-weight: 500;
+  font-size: 13px;
+
+  color: #909090;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+
+  &__icon {
+    width: 13px;
+    height: 13px;
+  }
+
+  &__count {
+    font-weight: 400;
+  }
+}
+
+.creating-lecture {
+  padding-top: 50px;
+
+  &__title {
+    margin: 0 0 40px 0;
+  }
+
+  &__description {
+    margin: 0 0 15px 0;
+  }
+
+  &__sub-title {
+    margin: 0 0 20px 0;
+  }
+
+  &__input {
+    margin: 0 0 20px 0;
+  }
+
+  &__buttons {
+    max-width: 280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__url {
+    margin: 0 0 20px 0;
+  }
+
+  &__select {
+    margin: 0 0 20px 0;
+  }
+
+  &__date {
+    margin: 0 0 20px 0;
+  }
+
+  &__score {
+    margin: 0 0 20px 0;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  input[type="file"]+label {
+    display: inline-flex;
+  }
+
+  &__image {
+    width: 100%;
+    margin: 0 0 20px 0;
+
+    img {
+      width: 100%;
+      height: 166px;
+      object-fit: cover;
+    }
+  }
+
+  &__local-image {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100px;
+      object-fit: inherit;
+    }
+  }
+
+  &__error {
+    margin: -15px 0 10px 0;
+    color: red;
+    font-size: 13px;
+  }
+
+}

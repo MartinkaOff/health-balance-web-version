@@ -1,0 +1,46 @@
+@import 'src/assets/style/variables';
+
+.health-index {
+  position: relative;
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__body {
+  }
+
+  &__image {
+    margin: 0 auto 33px auto;
+    max-width: 214px;
+    display: block;
+    img {
+    }
+  }
+  &__title {
+    margin: 0 0 8px 0;
+    text-align: center;
+  }
+  &__text {
+    font-size: 13px;
+    text-align: center;
+
+    color: #ababab;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 70px;
+  }
+}
+.continue-questionnaire {
+  &__title {
+    margin: 0 0 15px 0;
+  }
+  &__text {
+    margin: 0 0 40px 0;
+    font-size: 13px;
+    color: #ababab;
+  }
+}

@@ -1,0 +1,9 @@
+
+.modal-instructions{
+  position: relative;
+  &__text{
+    height: 100%;
+    position: absolute;
+    font-size: 20px;
+  }
+}

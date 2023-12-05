@@ -1,0 +1,102 @@
+{
+  "name": "health-balance",
+  "version": "1.0.0",
+  "author": "WeeDoWeb",
+  "homepage": "https://weedoweb.com/",
+  "private": true,
+  "dependencies": {
+    "@awesome-cordova-plugins/core": "^6.2.0",
+    "@awesome-cordova-plugins/health": "^6.2.0",
+    "@awesome-cordova-plugins/pdf-generator": "^6.3.0",
+    "@capacitor-community/barcode-scanner": "^3.0.1",
+    "@capacitor-community/file-opener": "^1.0.4",
+    "@capacitor/android": "^4.6.1",
+    "@capacitor/app": "^4.1.1",
+    "@capacitor/camera": "^4.1.4",
+    "@capacitor/cli": "^4.6.1",
+    "@capacitor/core": "^4.6.1",
+    "@capacitor/device": "^4.1.0",
+    "@capacitor/filesystem": "^4.1.4",
+    "@capacitor/ios": "^4.6.1",
+    "@capacitor/toast": "^4.1.0",
+    "@codetrix-studio/capacitor-google-auth": "^3.2.2",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@ionic/pwa-elements": "^3.1.1",
+    "@reduxjs/toolkit": "^1.8.3",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.41",
+    "@types/react": "^18.0.14",
+    "@types/react-datepicker": "^4.4.2",
+    "@types/react-dom": "^18.0.5",
+    "@types/react-input-mask": "^3.0.1",
+    "@types/react-redux": "^7.1.24",
+    "@types/react-router-dom": "^5.3.3",
+    "axios": "^0.27.2",
+    "capacitor-plugin-safe-area": "^1.0.1",
+    "chart.js": "^3.8.0",
+    "cordova-pdf-generator": "^2.1.1",
+    "cordova-plugin-health": "^1.1.5",
+    "html2pdf.js": "^0.10.1",
+    "jetifier": "^2.0.0",
+    "moment": "^2.29.4",
+    "onesignal-cordova-plugin": "^3.3.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-confirm-alert": "^3.0.6",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.34.2",
+    "react-input-mask": "^2.0.4",
+    "react-qr-reader": "^3.0.0-beta-1",
+    "react-quill": "^2.0.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "redux-persist": "^6.0.0",
+    "rmc-picker": "^5.0.10",
+    "rxjs": "^7.8.0",
+    "sass": "^1.53.0",
+    "sweetalert": "^2.1.2",
+    "swiper": "^8.2.6",
+    "typescript": "^4.7.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start --host 0.0.0.0",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/draftjs-to-html": "^0.8.1",
+    "@types/html-to-draftjs": "^1.4.0",
+    "@types/react-draft-wysiwyg": "^1.13.4",
+    "@types/redux-persist": "^4.3.1",
+    "react-to-pdf": "^0.0.14",
+    "webpack-cli": "^4.10.0"
+  }
+}

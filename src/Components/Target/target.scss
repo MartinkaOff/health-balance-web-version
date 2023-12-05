@@ -1,0 +1,68 @@
+@import "src/assets/style/variables";
+
+.target {
+  border-radius: 5px;
+  background: $backgroundBlock;
+  margin: 0 auto;
+  width: 344px;
+
+  &__container {
+    padding: 10px 13px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 28px 0;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 15px;
+
+    color: $colorMain;
+  }
+
+  &__change {
+    font-weight: 400;
+    font-size: 13px;
+
+    color: $blueColor;
+  }
+
+  &__body {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.days {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  &__circle {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    display: block;
+  }
+
+  &__track {
+    fill: transparent;
+    stroke: $blueColor;
+    stroke-width: 1px;
+    transform-origin: center;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 13px;
+
+    color: #999999;
+  }
+}

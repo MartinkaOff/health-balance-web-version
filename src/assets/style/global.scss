@@ -1,0 +1,690 @@
+@import 'src/assets/style/variables';
+
+._container {
+  padding: 16px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  bottom: 9px;
+  width: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5px;
+  background: $colorMain;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+}
+
+.band-black {
+  height: 63px;
+  background: $backgroundMain;
+  padding: 16px;
+  margin: -16px;
+}
+
+/******* Styles Select, Input, Buttons ******************/
+._button-white {
+  height: 41.5px;
+  background: $colorMain;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+
+  &.disabled {
+    background: linear-gradient(91.14deg,
+        rgba(255, 255, 255, 0.53) -13.28%,
+        rgba(0, 0, 0, 0.2597) 138.38%);
+    color: #252525;
+  }
+}
+
+._button-dark {
+  width: 100%;
+  color: $blueColor;
+  background: $backgroundBlock;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+._button-yellow {
+  width: 100%;
+  color: #000;
+  background: linear-gradient(180deg, #f2994a 0%, #f4c119 100%);
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+._button-dark-yellow {
+  width: 100%;
+  color: $yellowColor;
+  background: #232323;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+._field {
+  background: #5c5c5c;
+  border-radius: 3px;
+  height: 44.32px;
+  color: $colorMain;
+  font-family: inherit;
+  width: 100%;
+  padding: 0 7px;
+  font-size: 15px;
+  line-height: 100%;
+  outline: none;
+
+  &::placeholder {
+    color: #bfbfbf;
+  }
+}
+
+/*Этот класс присваивается div элементу (то есть родиетлю select)*/
+._custom-select {
+  position: relative;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 6.5px;
+    background: $colorMain;
+    display: block;
+    pointer-events: none;
+  }
+
+  &:before {
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  &:after {
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  select {
+    border-radius: 3px;
+    width: 100%;
+    background: #5c5c5c;
+    padding: 14px 12px;
+    font-weight: 400;
+    font-size: 15px;
+    outline: none;
+
+    color: #bfbfbf;
+    appearance: none;
+  }
+}
+
+.custom-checkbox {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+
+  &__radio {
+    height: 10px;
+    margin-right: 5px;
+    position: relative;
+    display: none;
+    top: 1px;
+  }
+
+  &__checkbox {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+  }
+
+  label {
+    color: var(--colorMain);
+    font-size: 15px;
+    line-height: 100%;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: '';
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 2px solid $colorMain;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+        inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+      padding: 7.5px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      margin-right: 13px;
+    }
+  }
+
+  input[type='radio']+label:before {
+    border-radius: 50%;
+  }
+
+  input[type='radio']:checked+label:after {
+    border-radius: 50%;
+  }
+
+  input:checked+label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 4px;
+    width: 11px;
+    height: 11px;
+    background: #f39f18;
+  }
+}
+
+/***********************************************/
+
+/*******  Styles Swiper Slide *****************/
+.swiper-pagination-clickable .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: $yellowColor;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background: $colorMain;
+  opacity: 1;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 123px !important;
+
+  @media (max-height: 612px) {
+    bottom: 72px !important;
+  }
+}
+
+/***********************************************/
+.circle-gradient {
+  position: absolute;
+  text-align: center;
+  width: 85%;
+  margin: 0px auto;
+  left: 7%;
+  height: 29%;
+  bottom: -164px;
+  background: $blueColor;
+  filter: blur(85px);
+
+  &_top {
+    top: -27%;
+    width: 62%;
+    left: 19%;
+    bottom: 0;
+    filter: blur(75px);
+  }
+}
+
+.circle-gradient_green {
+  background: $greenColor;
+}
+
+/***********************************************/
+._hint {
+  position: absolute;
+  border-radius: 5px;
+  left: 7.3px;
+  top: 9px;
+  background: $backgroundBlock;
+  color: $yellowColor;
+  font-size: 15px;
+
+  padding: 10px 20px;
+  z-index: 3;
+
+  &_command {
+    color: $blueColor;
+  }
+
+  &_personal {
+    color: $greenColor;
+  }
+}
+
+.select-gender {
+  display: flex;
+
+  input {
+    display: none;
+  }
+
+  label {
+    border: 2px solid #999999;
+    font-size: 15px;
+    text-align: center;
+    display: inline-block;
+
+    position: relative;
+    padding: 12px 20px;
+    margin: 0 15px 0 0;
+    border-radius: 50px;
+  }
+
+  input:checked+label {
+    border: 2px solid $yellowColor;
+  }
+}
+
+.active-plug {
+  background: #191919;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 113px;
+  font-size: 15px;
+  color: #ababab;
+  border-radius: 10px;
+}
+
+/***********Calendar*************/
+
+.react-datepicker {
+  background-color: #191919 !important;
+  border: none !important;
+
+  &__day,
+  &__day-name {
+    width: 2.5rem !important;
+    line-height: 2.5rem !important;
+    color: #E0E0E0 !important;
+  }
+
+  &__header {
+    background-color: #191919 !important;
+    border-bottom: none !important;
+  }
+
+  &__day--disabled {
+    color: #3C3844 !important;
+  }
+
+  &__day--selected {
+    border-radius: 100% !important;
+    border: 1px solid #00A62E;
+    background-color: #191919 !important;
+  }
+
+  &__day--keyboard-selected {
+    border-radius: 100% !important;
+    border: 1px solid #00A62E;
+    background-color: #191919 !important;
+  }
+
+  &__current-month {
+    color: #E0E0E0 !important;
+  }
+
+  &__day:hover {
+    opacity: 0.5;
+    background-color: #00A62E !important;
+    border-radius: 100% !important;
+  }
+}
+
+// .react-datepicker__day,
+// .react-datepicker__day-name {
+//   width: 2.5rem !important;
+//   line-height: 2.5rem !important;
+// }
+
+// .react-datepicker__day--in-range {
+//   width: 100%;
+//   background: #F9B477;
+//   color: $colorMain;
+// }
+
+// .react-datepicker{
+//   background: $backgroundBlock;
+//   padding: 18px 22px 37px 22px;
+//   color: $colorMain !important;
+//   border-radius: 10px;
+//   font-size: 14px;
+//   &__header{
+//     //background: $backgroundBlock;
+//   }
+
+//   &__day-names{
+//     background: $backgroundBlock;
+//     color: $colorMain !important;
+//     text-align: center;
+//   }
+//   &__month{
+//     text-align: center;
+//   }
+// }
+// //
+// .react-datepicker__current-month{
+//   font-weight: 400;
+//   font-size: 16px;
+//   line-height: 150%;
+//   text-align: center;
+//   letter-spacing: 0.12px;
+//   color: #EEECF1;
+//   margin: 0 15px;
+// }
+// .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+//   color: $colorMain;
+//   display: inline-flex;
+//   width: 100%;
+//   max-width: 35px;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 5px;
+//   text-align: center;
+//   margin: 5px 0;
+// }
+// .react-datepicker__day--in-selecting-range,
+// .react-datepicker__day--in-range, .react-datepicker__month-text--selected, .react-datepicker__month-text--in-selecting-range,
+// .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--selected, .react-datepicker__quarter-text--in-selecting-range,
+// .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--selected, .react-datepicker__year-text--in-selecting-range,
+// .react-datepicker__year-text--in-range {
+//   position: relative;
+//   z-index: 2;
+//   background: #F9B477;
+//   color: $colorMain;
+//   &:first-child{
+//    border-radius: 50% 0 0 50%;
+//   }
+//   &:last-child{
+//    border-radius: 0 50% 50% 0;
+//   }
+// }
+
+// .react-datepicker__day.react-datepicker__day--range-end {
+//   &:first-child{
+//     border-radius:50% !important;
+//   }
+// }
+
+// .react-datepicker__day.react-datepicker__day--range-start {
+//   &:last-child{
+//     border-radius:50% !important;
+//   }
+// }
+
+// //.react-datepicker__day--selected,
+// //.react-datepicker__day--in-selecting-range,
+// //.react-datepicker__day--in-range,
+// ////.react-datepicker__month-text--selected, .react-datepicker__month-text--in-selecting-range,
+// ////.react-datepicker__month-text--in-range, .react-datepicker__quarter-text--selected, .react-datepicker__quarter-text--in-selecting-range,
+// ////.react-datepicker__quarter-text--in-range, .react-datepicker__year-text--selected, .react-datepicker__year-text--in-selecting-range,
+// ////.react-datepicker__year-text--in-range
+// //  {
+// //  position: relative;
+// //  z-index: 2;
+// //  background: #F9B477;
+// //  color: $colorMain;
+// //  &:first-child{
+// //    border-radius: 50% 0 0 50%;
+// //  }
+// //
+// //  &:last-child{
+// //    border-radius: 50%;
+// //  }
+// //
+// //}
+// .react-datepicker__week{
+//  // background: red;
+// }
+// .react-datepicker__day--range-end, .react-datepicker__day--selected,.react-datepicker__day--range-start{
+//  border-radius: 50% 0 0 50% !important;
+// }
+// .react-datepicker__day--range-end{
+//   border-radius: 0 50% 50% 0 !important;
+// }
+// .react-datepicker__day--in-range{
+//   width: 100%;
+// }
+
+// .react-datepicker__day--range-start .plank, .react-datepicker__day--range-end .plank, .react-datepicker__day--selected .plank{
+//   background-color: $yellowColor;
+//   color: #000;
+//   border-radius: 50%;
+//   width: 100%;
+//   padding: 5px;
+//   margin: -5px;
+//   height: 100%;
+// }
+
+// .react-datepicker__day--selected{
+//   //background: red !important;
+//   //border-radius: 50% !important;
+//  }
+
+// .react-datepicker-popper{
+//   position: relative !important;
+//   transform: translate3d(0, 0, 0px) !important;
+// }
+
+// .Calendar{
+//   background: $backgroundBlock !important;
+//   color: $colorMain !important;
+//   --cl-color-black: #fff !important;
+//   --cl-color-disabled: #d4d4d4;
+//   --cl-color-error: #fff !important;
+// }
+// .Calendar__day{
+//   color: $colorMain !important;
+//   font-size: 14px !important;
+//   border: none !important;
+//   padding: 0 !important;
+// }
+// .Calendar__day.-selectedBetween {
+//   background: #F9B477 !important;
+//   color: $colorMain !important;
+//   border-radius: 0;
+//   &:first-child{
+//     border-radius: 50% 0 0 50% !important;
+//   }
+//   &:last-child{
+//     border-radius: 0 50% 50% 0 !important;
+//   }
+// }
+
+// .Calendar__day.-selected, .Calendar__day.-selectedStart, .Calendar__day.-selectedEnd {
+//   //background: #F9B477 !important;
+//   //border-radius: 50% !important;
+
+//   background: $yellowColor !important;
+//   color: #000 !important;
+// }
+
+// .Calendar__day.-ltr.-selectedStart span{
+//   border-radius: 50%;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background: $yellowColor;
+//   color: #000;
+// }
+//.react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__quarter-text--keyboard-selected, .react-datepicker__year-text--keyboard-selected {
+//  border-radius: 0.3rem;
+//  color: #000 !important;
+//  background: #fff !important;
+//}
+
+/***************************Texts****************************************/
+.text-blue {
+  font-weight: 400;
+  font-size: 13px;
+
+  color: $blueColor;
+}
+
+.text-yellow {
+  font-weight: 400;
+  font-size: 13px;
+
+  color: $yellowColor;
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.block-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.title-17 {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.title-35 {
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.small-text {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+/****************************************************************/
+.digits {
+  font-weight: 400;
+  font-size: 43.5849px;
+
+  .digits__square {
+    background: $backgroundBlock;
+    border-radius: 10px;
+    height: 77px;
+    width: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/****************************Scroll tabs***************************************/
+.scroll-tabs {
+  display: flex;
+  overflow: scroll;
+  margin: 40px 0 20px 0;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  &::-webkit-scrollbar {
+    height: 0;
+    -webkit-appearance: none;
+    width: 0;
+  }
+
+  scrollbar-width: none;
+
+  &-labels {
+    &:not(:last-child) {
+      // margin: 0 20px 0 0;
+      margin-right: 20px;
+    }
+
+    padding: 9px 20px;
+    text-align: center;
+    border-radius: 5px;
+    background: $backgroundBlock;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+
+    @media (max-width: 500px) {
+      margin-top: 20px;
+    }
+
+    &.active {
+      color: $yellowColor;
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+/********wysiwyg***********/
+.quill {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.ql-editor {
+  background: #5c5c5c;
+  border-radius: 3px;
+  height: 44.32px;
+  color: #fff;
+  font-family: inherit;
+  width: 100%;
+  padding: 14px 7px !important;
+  font-size: 15px;
+  line-height: 100%;
+  outline: none;
+  border: none;
+}
+
+.ql-toolbar {
+  background: #D9D9D9;
+}
+
+.ql-toolbar.ql-snow {
+  border: none;
+}
+
+.ql-container {
+  border: none !important;
+}
+
+.ql-editor.ql-blank::before {
+  font-style: normal !important;
+  color: #bfbfbf !important;
+  left: 5px !important;
+}

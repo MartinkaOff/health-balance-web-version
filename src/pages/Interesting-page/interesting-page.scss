@@ -1,0 +1,57 @@
+@import "src/assets/style/variables";
+
+.interesting-page {
+  padding: 0 0 84px 0;
+
+  &__main-title {
+    margin: 0 0 20px 0;
+  }
+
+  &__actual {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: scroll;
+    margin: 0 0 40px 0;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__actual-item {
+    flex: 0 0 117px;
+  }
+
+  &__wrapper {
+    margin: 60px auto;
+    // margin: 60px 13%;
+    width: 900px;
+    overflow: hidden;
+
+    @media(max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__cards {
+    gap: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 752px;
+
+    @media(max-width: 500px) {
+      display: flex;
+      justify-content: center;
+      width: auto;
+    }
+  }
+
+  &__header-wrapper {
+    @media(max-width: 500px) {
+      width: 200%;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "src/assets/style/variables";
+
+.banner{
+  margin: 0 0 25px 0;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: #003973;
+  padding: 20px 24px;
+  position: relative;
+  color: $colorMain;
+
+  &__img{
+    flex: 0 0 65px;
+    height: 65px;
+    margin: 0 14px 0 0;
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 121%;
+    white-space: pre-line;
+    word-break: break-word;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+  }
+  &__text{
+    font-size: 17px;
+    line-height: 121%;
+    white-space: pre-line;
+    word-break: break-word;
+  }
+}

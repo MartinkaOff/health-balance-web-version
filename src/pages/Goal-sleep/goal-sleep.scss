@@ -1,0 +1,37 @@
+@import "src/assets/style/variables";
+
+.goal-sleep{
+  padding-top: 50px;
+  &__title{
+    margin: 0 0 20px 0;
+  }
+
+  &__digits{
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px 0;
+    gap: 8px;
+    font-size: 44px;
+  }
+  &__digits-item{
+    background: $backgroundBlock;
+    font-size: 44px;
+    flex: 0 0 104px;
+    border-radius: 10px;
+  }
+
+  &__recommendation{
+    margin: 0 0 33px 0;
+    span{
+      margin: 0 0 0 7px;
+    }
+  }
+
+  &__button{
+    margin: 0 auto;
+  }
+}
+
+.clock{
+  border: none;
+}

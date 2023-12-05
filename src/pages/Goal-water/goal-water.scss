@@ -1,0 +1,27 @@
+
+
+.goal-water{
+  padding-top: 50px;
+  &__title{
+    margin: 0 0 23px 0;
+  }
+
+  &__weight{
+    margin: 0 auto 27px auto;
+    max-width: 224px;
+    width: 100%;
+  }
+
+  &__recommendation{
+    margin: 0 0 33px 0;
+    span{
+      margin: 0 0 0 7px;
+    }
+  }
+
+  &__button{
+    margin: 0 auto;
+  }
+
+
+}

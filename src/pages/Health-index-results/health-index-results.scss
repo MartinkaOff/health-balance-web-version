@@ -1,0 +1,131 @@
+@import "src/assets/style/variables";
+
+.health-index-results-page {
+  padding: 0 0 44px 0;
+
+  &__main-title {
+    margin: 0 0 42px 0;
+
+    &.old {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__retesting {
+    margin: 0 0 42px 0;
+  }
+
+  &__age {
+    margin: 0 0 40px 0;
+  }
+
+  &__title {
+    margin: 0 0 20px 0;
+  }
+
+  &__index {
+    margin: 0 0 20px 0;
+    display: flex;
+    gap: 10px;
+    overflow: scroll;
+    flex-wrap: wrap;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    scrollbar-width: none;
+  }
+
+  &__index-item {
+    // flex: 0 0 268px;
+    width: 48%;
+  }
+
+  &__link {
+    margin: 0 0 40px 0;
+    width: 238px;
+    height: 41px;
+  }
+
+  &__disease {
+    width: 75%;
+    margin: 0 0 20px 0;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+
+    @media(max-width: 768px) {
+      width: 100%;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    scrollbar-width: none;
+
+    &-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 19px;
+    }
+  }
+
+  &__disease-item {
+    flex: 0 0 157px;
+  }
+
+  &__wrapper-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media(max-width: 768px) {
+      justify-content: start;
+    }
+
+    @media(max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__indicators {
+    width: 50%;
+
+    @media(max-width: 768px) {
+      width: 100%;
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__block {
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+
+    @media(max-width: 768px) {
+      width: auto;
+      gap: 37px;
+      justify-content: flex-start;
+    }
+
+    @media(max-width: 500px) {
+      display: block;
+    }
+  }
+}

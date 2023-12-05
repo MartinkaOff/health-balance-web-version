@@ -1,0 +1,25 @@
+
+.card-actual{
+  flex: 0 0 33.333%;
+  opacity: 0.6;
+  height: 115px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 8px;
+  &__title{
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+    font-size: 13px;
+
+    color: #fff;
+  }
+  &__type{
+    font-weight: 400;
+    font-size: 10px;
+
+    color: #FFFFFF;
+  }
+}

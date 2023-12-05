@@ -1,0 +1,32 @@
+@import "src/assets/style/variables";
+
+.progress-bar {
+  max-width: 100%;
+  flex: 1 1 auto;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 13.34px;
+  }
+
+  &__strip {
+    flex: 1 1 auto;
+    height: 4px;
+    background: #474747;
+  }
+
+  &__fill {
+    border-radius: 16.1461px;
+    height: 100%;
+    background: linear-gradient(270deg, #F2994A 4.16%, #F4C319 100%);;
+
+    &_personal {
+      background: linear-gradient(270deg, #00A62E 4.16%, #3CF470 100%);
+    }
+
+    &_command {
+      background: $blueColor;
+    }
+  }
+}

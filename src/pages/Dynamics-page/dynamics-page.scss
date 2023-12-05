@@ -1,0 +1,97 @@
+@import "src/assets/style/variables";
+
+.dynamics-page {
+  padding-top: 50px;
+
+  &__title {
+    margin: 0 0 20px 0;
+  }
+
+  &__index {
+    margin: 0 0 40px 0;
+    display: flex;
+    gap: 10px;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    scrollbar-width: none;
+  }
+
+  &__index-item {
+    flex: 0 0 203px;
+  }
+
+  &__main-title {
+    margin: 0 0 20px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 23px;
+    flex-wrap: wrap;
+  }
+}
+
+.dynamics-index {
+  background: $backgroundBlock;
+  padding: 10px 10px 15px 10px;
+  border-radius: 7px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 15px;
+    margin: 0 0 20px 0;
+  }
+
+  &__chart {
+    margin: 0px 0 28px 0;
+    width: 300px;
+    height: 75%;
+
+    @media(max-width: 500px) {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__value {
+    font-weight: 500;
+    font-size: 17px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 13px;
+    color: #999999;
+
+    span {
+      color: $colorMain;
+    }
+  }
+}
+
+.dynamic-bullet {
+  background-color: #C4C4C4;
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+
+  &_active {
+    background: #56CCF2;
+  }
+}
+
+.modbullets {
+  position: static;
+}

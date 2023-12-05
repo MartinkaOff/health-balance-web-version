@@ -1,0 +1,31 @@
+@import 'src/assets/style/variables';
+
+.report-page {
+  padding: 50px 5px;
+
+  overflow: auto;
+
+  @media(max-width: 500px) {
+    padding: 0 5px;
+  }
+
+  &__content {
+    width: 100%;
+    color: #000000;
+    background: #fff;
+    margin: 0 0 40px 0;
+  }
+
+  &__button {
+    background: linear-gradient(180deg, #00a62e 0%, #074d1b 100%);
+    border-radius: 8px;
+    font-size: 13px;
+    text-align: center;
+    color: #000000;
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+  }
+
+
+}

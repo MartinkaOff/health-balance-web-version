@@ -1,0 +1,25 @@
+.footer {
+  border-top: 1px solid #202020;
+  padding: 24px 0 8px 0;
+  justify-content: center;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 130px;
+
+    @media (max-width: 768px) {
+      padding: 20px 0;
+    }
+  }
+
+  span {
+    color: #8B8787;
+  }
+
+  &__item {
+    color: #fff;
+    line-height: 120%;
+  }
+}

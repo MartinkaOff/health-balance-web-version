@@ -1,0 +1,44 @@
+@import "src/assets/style/variables";
+
+.questionnaire-page {
+  padding-top: 50px;
+
+  @media(max-width: 500px) {
+    padding-top: 100px;
+  }
+
+  &__button {
+    min-width: 112px;
+    margin: 0 auto;
+  }
+
+  &__question {
+    margin: 0 0 38px 0;
+  }
+
+  &__progress-bar {
+    margin: 0 0 27px 0;
+    padding: 0 0 26px 0;
+    border-bottom: 1px solid #202020;
+  }
+
+  &__progress-value {
+    margin: 0 0 12px 0;
+    font-weight: 700;
+    font-size: 13px;
+
+
+    span {
+      margin: 0 0 0 26px;
+      display: inline-block;
+    }
+  }
+
+}
+
+
+.item-question {
+  background: $backgroundBlock;
+  padding: 13px 13px 38px 13px;
+  border-radius: 10px;
+}

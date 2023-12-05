@@ -1,0 +1,12 @@
+.swiper {
+    &-slide {
+        // width: 117px !important;
+        // height: 115px !important;
+    }
+
+    &-wrapper {
+        @media(max-width: 768px) {
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import "src/assets/style/variables";
+
+.making-order{
+  padding-top: 50px;
+  &__title{
+    margin: 0 0 34px 0;
+  }
+  &__button{
+    margin: 0 auto;
+  }
+}
+
+.form-order{
+  margin: 0 0 50px 0;
+
+  &__label{
+    display: block;
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    font-size: 17px;
+
+  }
+
+  &__field{
+    &:not(:last-child){
+      margin: 0 0 18px 0;
+    }
+  }
+}

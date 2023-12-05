@@ -1,0 +1,37 @@
+.statistic-tracker {
+	// padding-top: 50px;
+
+	&__calendar {
+		margin: 0 0 10px 0;
+		text-align: center;
+	}
+
+	&__main-wrapper {
+		position: relative;
+		// padding-top: 140px;
+		display: flex;
+		width: 828px;
+		height: 700px;
+		margin: 0 auto;
+		justify-content: space-between;
+
+		@media (max-width: 768px) {
+			width: 700px;
+		}
+
+		@media (max-width: 500px) {
+			display: block;
+			width: auto;
+		}
+	}
+
+	&__tabs {
+		// margin: 0 15%;
+
+		@media (max-width: 500px) {
+			margin: auto;
+		}
+	}
+
+
+}

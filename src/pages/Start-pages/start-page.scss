@@ -1,0 +1,112 @@
+@import 'src/assets/style/variables';
+@import 'src/assets/style/mixins';
+
+.preview {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  padding: 16px;
+  margin: -16px;
+  &__swiper {
+    margin: -16px;
+    padding: 16px;
+  }
+  // &__body {
+  //   height: 80vh;
+  // }
+  &__title {
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+
+    color: $colorMain;
+    margin-bottom: 16px;
+    @include adaptive-value('margin-top', 223, 100, 1);
+    &_above-92 {
+      @include adaptive-value('margin-top', 92, 36, 1);
+    }
+    &_above-75 {
+      margin-top: 75px;
+      @media (max-height: 777px) {
+        margin-top: 25px;
+      }
+    }
+  }
+  &__sub-title {
+    font-weight: 700;
+    font-size: 15px;
+
+    color: $colorMain;
+    text-align: center;
+    margin: 0 0 -15px 0;
+    @media (max-height: 715px) {
+      margin: 0 0 -30px 0;
+    }
+    @media (max-height: 645px) {
+      margin: 0 0 -45px 0;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 120%;
+    text-align: center;
+
+    color: #ababab;
+    margin-bottom: 26px;
+
+    &.small {
+      font-size: 13px;
+    }
+
+    img {
+      margin: 0 0 0 9px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 50px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+    @media (max-height: 612px) {
+      bottom: 0;
+    }
+  }
+  &__scroll-picker-steps {
+    max-width: 224px;
+    margin: 0 auto 35px auto;
+  }
+  &__target {
+    box-shadow: 0px 0px 48px rgba(242, 153, 74, 0.31);
+    // max-width: 253px;
+    transform: scale(0.605);
+    margin: 35px auto 0 auto;
+  }
+  &__steps {
+    margin: 0 0 -30px 0;
+    transform: scale(0.594);
+    @media (max-height: 715px) {
+      transform: scale(0.494);
+      margin: 0 0 -45px 0;
+    }
+    @media (max-height: 645px) {
+      transform: scale(0.394);
+      margin: 0 0 -60px 0;
+    }
+  }
+  &__steps-data {
+    margin: 0 auto 40px auto;
+    transform: scale(0.62);
+    @media (max-height: 715px) {
+      margin: 0 auto 15px auto;
+    }
+  }
+}

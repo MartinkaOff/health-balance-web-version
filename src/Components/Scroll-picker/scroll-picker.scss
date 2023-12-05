@@ -1,0 +1,54 @@
+@import "src/assets/style/variables";
+
+  .rmc-picker,
+  .rmc-multi-picker {
+    height: 141px;
+  }
+
+  .rmc-multi-picker {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .rmc-picker-item {
+    font-size: 13px;
+    height: 47px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rmc-picker-mask {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(18, 18, 18, 0.95),
+      rgba(18, 18, 18, 0.6)
+    ),
+    linear-gradient(to top, rgba(18, 18, 18, 0.95), rgba(18, 18, 18, 0.6));
+  }
+
+  .rmc-picker-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 0;
+  }
+
+  .rmc-picker-indicator {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 47px;
+    z-index: 3;
+    border-top: 2px solid #7D7D8A;
+    border-bottom: 2px solid #7D7D8A;
+  }

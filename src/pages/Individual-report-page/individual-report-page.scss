@@ -1,0 +1,20 @@
+@import "src/assets/style/variables";
+
+.individual-report-page {
+  margin: 0 auto;
+  width: 360px;
+  padding-top: 50px;
+
+  @media(max-width: 500px) {
+    padding-top: 0;
+  }
+
+  &__item {
+    padding: 20px 0;
+    border-bottom: 1px solid #202020;
+  }
+
+  &__title {
+    margin: 0 0 10px 0;
+  }
+}

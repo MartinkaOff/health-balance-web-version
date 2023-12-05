@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">HealthBalance</string>
+    <string name="title_activity_main">HealthBalance</string>
+    <string name="package_name">health.balance.kz</string>
+    <string name="custom_url_scheme">health.balance.kz</string>
+    <string name="server_client_id">892578456296-nmrjb7m8pn1f109psnaoff2q2es6s19f.apps.googleusercontent.com</string>
+</resources>

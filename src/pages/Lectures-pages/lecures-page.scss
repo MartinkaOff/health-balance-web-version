@@ -1,0 +1,26 @@
+.lectures-pages {
+
+  // padding-top: 50px;
+  &__title {
+    margin: 0 0 40px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+
+  &__header {
+    padding-top: 50px;
+
+    @media (max-width: 500px) {
+      padding-top: 100px;
+    }
+  }
+
+}

@@ -1,0 +1,136 @@
+@import "src/assets/style/variables";
+
+
+.message-text{
+  font-size: 15px;
+  line-height: 110%;
+  margin-bottom: 5px;
+  word-break: break-word;
+
+}
+.small-text-comment{
+  font-size: 10px;
+  line-height: 130%;
+  color: #919191;
+}
+.author-text{
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 130%;
+  margin-bottom: 5px;
+  color: #FBFBFB;
+}
+
+.comment-form{
+
+  &__answer-author{
+    margin-bottom: 5px;
+    font-size: 10px;
+    line-height: 130%;
+    color: #919191;
+    span{
+      color: $colorMain;
+      margin-left: 5px;
+    }
+  }
+
+  &__body{
+    position: relative;
+  }
+  &__textarea{
+    width: 100%;
+    padding: 11px;
+    font-size: 15px;
+    line-height: 130%;
+    outline: none;
+    color: #C2C1C1;
+    resize: none;
+    background: #5C5C5C;
+    border-radius: 3px;
+    &::placeholder{
+      color: inherit;
+    }
+  }
+  &__button-submit{
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: #232323;
+    border-radius: 3px;
+    color: $colorMain;
+    padding: 4px 17px;
+    font-size: 15px;
+
+  }
+}
+
+.list-comments{
+  background: $backgroundBlock;
+  padding: 15px;
+  border-radius: 10px;
+  &__count{
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 20px 0;
+  }
+}
+
+.item-comment{
+
+  &:not(:last-child){
+    margin-bottom: 10px;
+  }
+
+  &__body{
+    display: flex;
+    gap: 10px;
+  }
+
+  &__data{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    span{
+      text-transform: uppercase;
+    }
+  }
+
+  &__author{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+
+  &__avatar{
+    flex: 0 0 40px;
+    height: 40px;
+    &_reply{
+      flex: 0 0 26px;
+      height: 26px;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__answer{
+    margin: 10px 0 0 48px;
+  }
+}
+.item-comment-reply{
+  &:not(:last-child){
+    margin-bottom: 10px;
+  }
+}
+.item-comment-reply > .item-comment > .item-comment__answer{
+ margin: 10px 0 0 0;
+}
+

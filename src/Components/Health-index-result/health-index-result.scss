@@ -1,0 +1,191 @@
+@import "src/assets/style/variables";
+
+.card-biology-age {
+  margin: 0 auto;
+  padding: 34px 98px;
+  max-height: 288px;
+  max-width: 338px;
+  background: linear-gradient(180deg, #00A62E 0%, #176B09 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+
+  @media(max-width: 768px) {
+    padding: 20px 30px;
+  }
+
+  @media(max-width: 500px) {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+  }
+
+  &__title {
+    margin-top: 28px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 82.5%;
+    text-align: center;
+
+    max-width: 157px;
+
+    @media(max-width: 500px) {
+      margin-top: 0;
+      text-align: start;
+    }
+  }
+
+  &__age {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 82.5%;
+    text-align: center;
+
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+    border: 4px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 500px) {
+      width: 109px;
+      height: 109px;
+    }
+  }
+}
+
+.card-index {
+  padding: 8px 11px;
+  background: linear-gradient(180deg, #aaa9a9 0%, #7e7979 100%);
+  border-radius: 10px;
+  min-height: 104px;
+
+  &_1 {
+    background: linear-gradient(180deg, #00A62E 0%, #176B09 100%);
+    color: #00A62E
+  }
+
+  &_2 {
+    background: linear-gradient(180deg, #D7CF15 0%, #A69500 100%);
+    color: #D7CF15
+  }
+
+  &_3 {
+    background: linear-gradient(180deg, #D71515 0%, #862221 100%);
+    color: #FF0000;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 23px 0;
+    align-items: baseline;
+  }
+
+  &__title {
+    font-size: 13px;
+
+    color: #171717;
+    flex: 0 1 94px;
+  }
+
+  &__hint {
+    background: $backgroundBlock;
+    border-radius: 3px;
+    padding: 3px 6px;
+
+    font-size: 10px;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 82.5%;
+
+    color: #171717;
+
+    &_1 {
+      color: #fff;
+    }
+
+    &_2 {
+      color: #171717
+    }
+
+    &_3 {
+      color: #fff;
+    }
+  }
+}
+
+.card-disease {
+  padding: 10px;
+  background: $backgroundBlock;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18%;
+  min-height: 80%;
+
+  @media(max-width: 768px) {
+    width: 100%;
+  }
+
+  &__title {
+    // max-width: 94px;
+    font-size: 17px;
+
+  }
+
+  &__mark {
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.retesting {
+  padding: 22px 17px;
+  border-radius: 7px;
+  background: $backgroundBlock;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__text {
+    font-weight: 500;
+    font-size: 15px;
+
+
+    span {
+      font-weight: 400;
+      font-size: 13px;
+      margin-top: 5px;
+      color: #ABABAB;
+      display: block;
+    }
+  }
+
+  &__link {
+    padding: 10px 12px;
+    background: #232323;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+
+    color: $blueColor;
+  }
+}

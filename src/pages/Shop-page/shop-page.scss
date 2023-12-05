@@ -1,0 +1,54 @@
+@import "src/assets/style/variables";
+
+.shop-page {
+  padding-top: 50px;
+
+  @media (max-width: 500px) {
+    padding-top: 0;
+  }
+
+  &__cards {
+    display: flex;
+    margin: 0 -10px -20px;
+    flex-wrap: wrap;
+  }
+
+  &__item-card {
+    flex: 0 0 50%;
+    padding: 0 10px;
+    margin: 0 0 20px 0;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px 20px;
+
+    &-labels {
+      margin: 0 0 10px 0;
+      padding: 0 5px;
+      flex: 0 1 33.333%;
+
+      span {
+        text-align: center;
+        border-radius: 5px;
+        background: $backgroundBlock;
+        font-size: 15px;
+        padding: 9px 0;
+        display: block;
+      }
+
+      &.active {
+        color: $yellowColor;
+      }
+    }
+  }
+
+
+  &__text {
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    color: #6F6969;
+  }
+}

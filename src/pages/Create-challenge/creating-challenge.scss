@@ -1,0 +1,10 @@
+.creating-challenge-page{
+  padding-top: 50px;
+  &__buttons{
+    display: flex;
+  }
+  &__button{
+    min-width: 112px;
+    margin: 45px auto 0 auto;
+  }
+}

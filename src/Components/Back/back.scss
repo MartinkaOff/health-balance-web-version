@@ -1,0 +1,47 @@
+.back {
+    display: flex;
+    margin: 40px auto;
+
+    &__arrow {
+        z-index: 10;
+        margin-top: 4px;
+        position: relative;
+        transform: rotate(180deg);
+        top: 5px;
+        width: 42px;
+        height: 4px;
+        background-color: #FFFFFF;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        left: 0;
+        display: block;
+        cursor: pointer;
+
+        ::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 4px;
+            top: -6px;
+            right: -4px;
+            background-color: #FFFFFF;
+            transform: rotate(45deg);
+        }
+
+        ::before {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 4px;
+            top: 5px;
+            right: -4px;
+            background-color: #FFFFFF;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            transform: rotate(-45deg);
+        }
+
+    }
+
+    &__title {
+        margin-left: 20px;
+    }
+}

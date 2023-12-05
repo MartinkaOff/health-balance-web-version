@@ -1,0 +1,45 @@
+@import "src/assets/style/variables";
+
+.header {
+  height: 53px;
+  position: fixed;
+  z-index: 3;
+  top: 55px;
+  width: 54%;
+  padding: 0 16px;
+  left: 0;
+  background: $backgroundMain;
+
+  @media (max-width: 500px) {
+    margin-top: 50px;
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__back {
+    position: absolute;
+    padding: 12px 12px 12px 0;
+    left: 0;
+    font-size: 13px;
+    top: 21px;
+    color: $colorMain;
+  }
+
+  &__title {
+    text-align: center;
+    flex: 0 1 75%;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    margin: 0 auto;
+    word-break: break-word;
+  }
+}

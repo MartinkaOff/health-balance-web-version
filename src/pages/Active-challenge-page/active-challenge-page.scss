@@ -1,0 +1,118 @@
+@import "src/assets/style/variables";
+
+
+.active-challenge-page {
+  padding: 0.5px 0 0 0;
+
+  &__header {
+    background: transparent;
+  }
+
+  &__main {
+    margin: 85px 0 36px 0;
+
+    @media (max-width: 500px) {
+      margin: 140px 0 36px 0;
+    }
+  }
+
+  &__title-block {
+    margin: 0 0 18px 0;
+  }
+
+  &__title-17 {
+    margin: 0 0 23px 0;
+
+    span {
+      color: $yellowColor;
+    }
+
+    &_command {
+      span {
+        color: $blueColor;
+      }
+    }
+
+    &_personal {
+      span {
+        color: $greenColor;
+      }
+    }
+
+  }
+
+  &__progress {
+    padding: 0 16px 20px 16px;
+    margin: 0 -16px 21px -16px;
+    border-bottom: 1px solid #202020;
+  }
+
+  &__button {
+    // margin: 0 0 40px 0;
+    margin: 42px auto;
+    width: 342px;
+  }
+
+  &__tasks {
+    margin: 0 0 20px 0;
+  }
+
+  &__reward {
+    margin: 0 0 40px 0;
+    gap: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @media (max-width: 768px) {
+      display: block;
+      margin: 0 10%;
+    }
+
+    @media (max-width: 500px) {
+      margin: auto;
+    }
+
+    &-content {
+      width: 557px;
+      margin-left: 18%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        margin: auto;
+      }
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+.ds {
+  background: transparent;
+}
+
+.tasks-active-challenge {
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 40px 0 20px 0;
+  }
+
+  &__data {
+    font-weight: 700;
+    font-size: 17px;
+
+    color: #FEFEFE;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}

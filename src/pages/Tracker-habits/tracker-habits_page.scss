@@ -1,0 +1,45 @@
+@import "../../assets/style/variables";
+
+.tracker-habits-page {
+  padding-bottom: 60px;
+
+  &__title {
+    margin: 0 0 20px 0;
+  }
+
+  &__task-column {
+    display: flex;
+    align-items: center;
+  }
+
+  &__task-title {
+    font-weight: 500;
+    font-size: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+
+    span {
+      color: $greenColor;
+      padding: 0 5px;
+    }
+
+    img {
+      width: 14px;
+      height: 100%;
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__target {
+    &:not(:last-child) {
+      margin: 0 0 46px 0;
+    }
+  }
+
+  &__statistical-btn-wrapper {
+    margin: 0 0 40px 0;
+  }
+}

@@ -1,0 +1,111 @@
+@import "src/assets/style/variables";
+
+.chat {
+	padding-top: 50px;
+
+	@media(max-width: 500px) {
+		padding-top: 0;
+	}
+}
+
+.personal-chat {
+
+	padding-top: 50px;
+
+	@media(max-width: 500px) {
+		padding-top: 100px;
+	}
+
+	height: calc(100vh - 34px);
+	;
+
+	&__container {
+		height: 100%;
+		margin: 0 -16px;
+	}
+
+	&__messages {
+		overflow-y: auto;
+		height: 90%;
+		padding: 0 16px;
+	}
+
+	&__send {
+		position: fixed;
+		bottom: 23px;
+		//	margin: 0 -16px;
+		width: 100%;
+		display: flex;
+	}
+
+	&__input {
+		background: #5C5C5C;
+		font-weight: 400;
+		font-size: 15px;
+		color: #B6B6B6;
+		height: 34px;
+		flex: 1 1 auto;
+		padding: 9px 0;
+		outline: none;
+
+		&::placeholder {
+			color: #B6B6B6;
+		}
+	}
+
+	&__paperclip {
+		height: 34px;
+		color: #B6B6B6;
+		background: #5C5C5C;
+		padding: 0 10px;
+	}
+
+	&__submit {
+		height: 34px;
+		color: #B6B6B6;
+		background: #5C5C5C;
+		padding: 0 17px;
+		font-size: 20px;
+	}
+}
+
+.message-item {
+
+	border-radius: 10px;
+	font-size: 15px;
+	line-height: 110%;
+	width: fit-content;
+	max-width: 180px;
+	margin: 0 0 20px 0;
+	display: flex;
+	align-items: center;
+
+	&__container {
+		background: $backgroundBlock;
+		padding: 5px 12px;
+	}
+
+	&__text {
+		margin: 0 0 6px 0;
+	}
+
+	&__avatar {
+		flex: 0 0 26px;
+		margin-right: 13px;
+		height: 26px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+	}
+
+	&__time {
+		text-align: right;
+		font-size: 10px;
+		line-height: 130%;
+		color: #919191;
+	}
+}
