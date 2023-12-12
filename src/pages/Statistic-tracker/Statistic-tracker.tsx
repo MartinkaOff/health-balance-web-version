@@ -32,7 +32,7 @@ export const StatisticTracker = () => {
             <NavigationComponent />
             <HeaderActive />
             <PullToRefresh onTrigger={handleRefresh} />
-            <div style={{ paddingTop: '65px' }}>
+            <div className='statistic-tracker__header'>
                 <Back content='Статистика трекера' />
             </div>
             {/* <Header title='Статистика трекера' /> */}
