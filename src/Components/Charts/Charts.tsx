@@ -18,8 +18,6 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 export const Charts = () => {
 
-
-
     const dispatch = useAppDispatch()
     const [currentValueTab, setCurrentValueTab] = useState<number>(0)
     const namesTabsDynamics = ['Дни', 'Недели', 'Месяцы']

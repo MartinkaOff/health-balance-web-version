@@ -27,7 +27,8 @@ import {
   getStepsPerWeek,
   setCurrentStepsCount,
   setMonths,
-  setWeeks
+  setWeeks,
+  stepsPerDaySelector
 } from '../../Redux/slice/appSlice'
 
 import { Charts } from '../../Components/Charts/Charts'
@@ -55,6 +56,8 @@ export const ActivityPage: FC = () => {
   const purpose = useAppSelector(purposeSelector)
   const currentStepsCount = useAppSelector(currentStepsCountSelector)
   const pedometer = useAppSelector(pedometerSelector)
+
+  const steps = useAppSelector(stepsPerDaySelector)
 
   useEffect(() => {
     startPluginFromPlatform()
@@ -199,7 +202,8 @@ export const ActivityPage: FC = () => {
               >
                 <Steps
                   maxStepsCount={purpose?.quantity || 0}
-                  userStepsCount={Math.abs(currentStepsCount)}
+                  // userStepsCount={Math.abs(currentStepsCount)}
+                  userStepsCount={steps.difference}
                 />
 
                 <div className='activity-page__steps-data'>
