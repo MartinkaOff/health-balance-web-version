@@ -19,9 +19,13 @@
     bottom: 0;
   }
 
-  @media (max-width: 320px) {
-    padding: 18px 20px;
+  @media (max-width: 500px) {
+    padding-left: 0;
   }
+
+  // @media (max-width: 320px) {
+  //   padding: 18px 20px;
+  // }
 
   &__body {
     display: flex;
@@ -37,6 +41,7 @@
       bottom: 0;
       height: 100%;
     }
+
   }
 
   &__link {
@@ -58,6 +63,14 @@
 
     @media (max-width: 768px) {
       flex-direction: column;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 13px;
+
+      &:before {
+        font-size: 13px;
+      }
     }
   }
 
