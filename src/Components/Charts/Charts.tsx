@@ -99,7 +99,6 @@ export const Charts = () => {
         setDataToCharts()
     }, [currentStepsCount])
 
-
     return (
         <div className="dynamics__wrapper">
             <div className='dynamics__title'>Динамика</div>

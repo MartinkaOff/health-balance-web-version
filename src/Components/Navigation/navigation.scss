@@ -13,7 +13,7 @@
 
   @media (max-width: 768px) {
     display: block;
-    width: 100%;
+    width: 93%;
     height: 9%;
     top: auto;
     bottom: 0;
@@ -58,6 +58,12 @@
 
     @media (max-width: 768px) {
       flex-direction: column;
+      font-size: 12px;
+    }
+
+    &:before {
+      font-size: 12px;
+      padding-right: 7px;
     }
   }
 
