@@ -1,14 +1,14 @@
-import {useEffect} from 'react'
-import {privateRoutes, publicRoutes} from './routes'
-import {Navigate, Route, Routes} from 'react-router-dom'
-import {useAppDispatch, useAppSelector} from '../hooks/redux-hooks'
-import {checkAuth, isAuthSelector, isLoadingSelector} from '../Redux/slice/authSlice'
-import {Preloader} from '../Components/Preloader/Preloader'
-import {useEditingProfileMutation, userApi} from '../services/user.api'
+import { useEffect } from 'react'
+import { privateRoutes, publicRoutes } from './routes'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from '../hooks/redux-hooks'
+import { checkAuth, isAuthSelector, isLoadingSelector } from '../Redux/slice/authSlice'
+import { Preloader } from '../Components/Preloader/Preloader'
+import { useEditingProfileMutation, userApi } from '../services/user.api'
 import ActualVersion from "../Components/Actual-version/Actual-version";
-import {VERSION_NAME} from "../utils/globalConstants";
-import {IUpdateUser} from "../models/IUsers";
-import {AuthPage} from "../pages/Authorization/Auth-page";
+import { VERSION_NAME } from "../utils/globalConstants";
+import { IUpdateUser } from "../models/IUsers";
+import { AuthPage } from "../pages/Authorization/Auth-page";
 
 
 const AppRouter = () => {
@@ -16,21 +16,21 @@ const AppRouter = () => {
     const isLoading = useAppSelector(isLoadingSelector)
     const dispatch = useAppDispatch()
 
-    const MissingRoute = () => <Navigate to={{pathname: '/'}} />
+    const MissingRoute = () => <Navigate to={{ pathname: '/' }} />
     const [editingProfile] = useEditingProfileMutation()
     const [getProfile] = userApi.endpoints.getProfile.useLazyQuery()
     const changeTimezone = async () => {
         if (localStorage.getItem('token')) {
             const timezone = -new Date().getTimezoneOffset() / 60
             const version = VERSION_NAME
-            const data: IUpdateUser = { timezone,version }
+            const data: IUpdateUser = { timezone, version }
             await editingProfile(data)
         }
     }
 
     useEffect(() => {
         if (isAuth) {
-            changeTimezone().then(()=>{
+            changeTimezone().then(() => {
                 getProfile(localStorage.getItem('id') as string)
             })
         }
@@ -38,15 +38,15 @@ const AppRouter = () => {
     }, [isAuth])
 
     if (isLoading) {
-        return <Preloader/>
+        return <Preloader />
     }
 
     return localStorage.getItem('token') ? (
         <>
-           <ActualVersion />
+            {/* <ActualVersion /> */}
             <Routes>
-                {privateRoutes.map(({path, Component}, index) => (
-                    <Route path={path} key={index} element={<Component/>} />
+                {privateRoutes.map(({ path, Component }, index) => (
+                    <Route path={path} key={index} element={<Component />} />
                 ))}
                 <Route path={'*'} element={<MissingRoute />} />
             </Routes>
@@ -54,10 +54,10 @@ const AppRouter = () => {
 
     ) : (
         <Routes>
-            {publicRoutes.map(({path, Component}, index) => (
-                <Route path={path} key={index} element={<Component/>}/>
+            {publicRoutes.map(({ path, Component }, index) => (
+                <Route path={path} key={index} element={<Component />} />
             ))}
-            <Route path={'*'} element={<AuthPage />}/>
+            <Route path={'*'} element={<AuthPage />} />
         </Routes>
     )
 }

@@ -37,7 +37,7 @@ export const Steps: FC<ISteps> = ({ maxStepsCount, userStepsCount }) => {
         ))}
         <div className='steps__body'>
           <div className='steps__title'>Вы прошли</div>
-          <div className='steps__count'>{userStepsCount || '-'}</div>
+          <div className='steps__count'>{userStepsCount}</div>
           <div className='steps__title'>{sklonenie(userStepsCount, ['шаг', 'шага', 'шагов'])}</div>
         </div>
       </div>

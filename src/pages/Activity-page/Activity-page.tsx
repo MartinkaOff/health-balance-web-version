@@ -41,6 +41,7 @@ import { Banner } from "../../Components/Banner/Banner";
 import { pedometerSelector } from "../../Redux/slice/settingsSlice";
 import { PEDOMETERS } from "../../utils/enums";
 import { showToast } from "../../utils/common-functions";
+import { nFormatter } from '../../utils/common-functions'
 
 import { CardActual } from '../../Components/Card-actual/Card-actual';
 // import how_to_start from '../../assets/image/actual/how-to-start.png';
@@ -185,6 +186,8 @@ export const ActivityPage: FC = () => {
     await getDataCharts()
   }
 
+  const indexWeek = new Date().getDay() === 0 ? 6 : new Date().getDay() - 1
+
   return (
     <div className='activity-page'>
       <PullToRefresh onTrigger={handleRefresh} />
@@ -203,7 +206,7 @@ export const ActivityPage: FC = () => {
                 <Steps
                   maxStepsCount={purpose?.quantity || 0}
                   // userStepsCount={Math.abs(currentStepsCount)}
-                  userStepsCount={steps.difference}
+                  userStepsCount={steps.statistic[indexWeek]?.quantity as unknown as number}
                 />
 
                 <div className='activity-page__steps-data'>
