@@ -22,8 +22,6 @@ export const Steps: FC<ISteps> = ({ maxStepsCount, userStepsCount }) => {
     return '#000'
   }
 
-  console.log(userStepsCount)
-
   return (
     <div className={'steps'}>
       <div className='steps__container'>
