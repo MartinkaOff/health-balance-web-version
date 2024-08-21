@@ -10,10 +10,6 @@
   left: 0;
   background: $backgroundMain;
 
-  @media (max-width: 500px) {
-    margin-top: 50px;
-  }
-
   &__container {
     display: flex;
     position: relative;
