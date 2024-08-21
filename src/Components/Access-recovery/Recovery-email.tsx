@@ -32,9 +32,7 @@ export const RecoveryEmail = () => {
 			<input
 				type="text"
 				className={
-					error
-						? "recovery-email__field _field error"
-						: "recovery-email__field _field"
+					error ? "recovery-email__field error" : "recovery-email__field"
 				}
 				value={email}
 				onChange={handlerEmail}
