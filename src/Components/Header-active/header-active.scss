@@ -8,7 +8,7 @@
   width: 100%;
   padding: 16px 16px;
   margin: -16px 0 0 0;
-  // background: $backgroundMain;
+  background: $backgroundMain;
 
   @media (max-height: 320px) {
     top: 0;
@@ -20,7 +20,7 @@
     align-items: center;
 
     @media (max-width: 768px) {
-      // margin: 0 39px;
+      background-color: $backgroundMain;
     }
 
     @media (max-width: 500px) {
@@ -35,14 +35,14 @@
     align-items: center;
 
     @media (max-width: 500px) {
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     &-links {
       @media (max-width: 500px) {
         gap: 37px;
         margin-left: 90%;
-        margin-top: -19%;
+        margin-top: -7%;
         flex-direction: column-reverse;
       }
     }
@@ -107,6 +107,10 @@
     line-height: 100%;
     /* 12px */
     letter-spacing: -0.24px;
+
+    @media (max-width: 500px) {
+      display: none;
+    }
 
     img {
       width: 37.092px;
