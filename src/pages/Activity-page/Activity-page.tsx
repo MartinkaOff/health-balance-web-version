@@ -42,10 +42,12 @@ import { pedometerSelector } from "../../Redux/slice/settingsSlice";
 import { PEDOMETERS } from "../../utils/enums";
 import { showToast } from "../../utils/common-functions";
 import { nFormatter } from "../../utils/common-functions";
+import { NewChallengeCard } from "../../Components/Challenge/New-challenge-card";
 
 import { CardActual } from "../../Components/Card-actual/Card-actual";
 // import how_to_start from '../../assets/image/actual/how-to-start.png';
 import { actualImage } from "../../assets/image/actual/actualImage";
+import { useGetChallengesQuery } from "../../services/ChallengeService";
 
 export const ActivityPage: FC = () => {
 	const dispatch = useAppDispatch();
@@ -59,6 +61,9 @@ export const ActivityPage: FC = () => {
 	const pedometer = useAppSelector(pedometerSelector);
 
 	const steps = useAppSelector(stepsPerDaySelector);
+
+	const { data: allChallenges } = useGetChallengesQuery(null);
+	const lastChallenges = allChallenges?.newChallenges.all[4];
 
 	useEffect(() => {
 		startPluginFromPlatform();
@@ -198,12 +203,10 @@ export const ActivityPage: FC = () => {
 			<HeaderActive /* transparent={transparentHeader} */ />
 			<NavigationComponent />
 			<div className={"activity-page__pull-to-refresh"}>
+				<div className="activity-page__steps-title title">Активность</div>
 				<div className="activity-page__wrapper">
 					<div className="activity-page__header">
 						<div>
-							<div className="activity-page__steps-title title">
-								Активность сегодня
-							</div>
 							<div
 								className="activity-page__steps"
 								id={"step"}
@@ -223,7 +226,16 @@ export const ActivityPage: FC = () => {
 							</div>
 						</div>
 						<div className="activity-page__actual">
-							<div className="title">Актуальное</div>
+							{lastChallenges ? (
+								<NewChallengeCard
+									type={lastChallenges.type}
+									id={lastChallenges.id}
+									description={lastChallenges.description}
+									image={lastChallenges.image}
+									title={lastChallenges.title}
+								/>
+							) : undefined}
+							{/* <div className="title">Актуальное</div>
 							<div className="activity-page__actual-items">
 								<CardActual
 									title="Как начать сегодня?"
@@ -243,7 +255,7 @@ export const ActivityPage: FC = () => {
 									image={actualImage.guide}
 									type="Интересное"
 								/>
-							</div>
+							</div> */}
 						</div>
 					</div>
 					{/* <Banner /> */}

@@ -24,8 +24,10 @@
     }
 
     &-title {
+      display: none;
       @media (max-width: 500px) {
-        display: none;
+        display: block;
+        margin-top: 20px;
       }
     }
   }
@@ -165,7 +167,7 @@
       margin-top: 26px;
       height: auto;
       margin-left: auto;
-      justify-content: space-evenly;
+      justify-content: space-between;
     }
   }
 
