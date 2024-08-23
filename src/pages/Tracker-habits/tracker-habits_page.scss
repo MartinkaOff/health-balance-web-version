@@ -3,6 +3,14 @@
 .tracker-habits-page {
   padding-bottom: 60px;
 
+  &-wrapper {
+    position: relative;
+    margin: 0 200px;
+    @media (max-width: 768px) {
+      margin: auto;
+    }
+  }
+
   &__title {
     margin: 0 0 20px 0;
   }
