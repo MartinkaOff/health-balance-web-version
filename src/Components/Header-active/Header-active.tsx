@@ -42,7 +42,7 @@ const HeaderActive = () => {
 			className={"header-active"}
 			style={{
 				// background: '#121212',
-				top: Capacitor.getPlatform() === "ios" ? 0 : "auto",
+				top: Capacitor.getPlatform() === "ios" ? 0 : "16px",
 				padding:
 					Capacitor.getPlatform() === "ios"
 						? `${+statusBar}px 16px 16px 16px`
@@ -55,7 +55,22 @@ const HeaderActive = () => {
 					HEALTH BALANCE
 				</div>
 				<div className="header-active__wrapper">
-					{pathname !== "/" ? (
+					{pathname === "/" ? (
+						<Link to={PROFILE_ROUTE} className="header-active__column">
+							<div className="header-active__avatar">
+								{dataUser.avatar && (
+									<img
+										src={IMAGE_URL + "avatars/" + dataUser.avatar}
+										alt="avatar"
+									/>
+								)}
+								{!dataUser.avatar && <img src={avatar} alt="avatar" />}
+							</div>
+							<div className="header-active__user-name icon-icon_back">
+								{dataUser.name}
+							</div>
+						</Link>
+					) : (
 						<div>
 							<div
 								className="header__back icon-icon_back"
@@ -66,21 +81,8 @@ const HeaderActive = () => {
 								}}
 							/>
 						</div>
-					) : undefined}
-					<Link to={PROFILE_ROUTE} className="header-active__column">
-						<div className="header-active__avatar">
-							{dataUser.avatar && (
-								<img
-									src={IMAGE_URL + "avatars/" + dataUser.avatar}
-									alt="avatar"
-								/>
-							)}
-							{!dataUser.avatar && <img src={avatar} alt="avatar" />}
-						</div>
-						<div className="header-active__user-name icon-icon_back">
-							{dataUser.name}
-						</div>
-					</Link>
+					)}
+
 					<div className="header-active__column header-active__column-links">
 						{/* {transparent ? (
               <RewardCount count={balance} />

@@ -69,8 +69,8 @@ export const TrackerHabitsPage = () => {
 			<PullToRefresh onTrigger={handleRefresh} />
 			<HeaderActive />
 			<NavigationComponent />
-			<HeaderTwo title={"Трекер привычек"} marginBottom={20} />
 			<div className="tracker-habits-page-wrapper">
+				<HeaderTwo title={"Трекер привычек"} marginBottom={20} />
 				<>
 					<div className="tracker-habits-page__target">
 						<HealthySleep />

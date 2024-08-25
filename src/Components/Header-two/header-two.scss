@@ -2,17 +2,17 @@
 
 .header-two {
   display: flex;
-  width: 1095px;
   margin: 0 auto;
-  // padding-top: 100px;
   align-items: center;
   justify-content: space-between;
 
   @media (max-width: 768px) {
-    width: 690px;
+    width: auto;
+    padding-top: 50px;
   }
 
   @media (max-width: 500px) {
-    width: 344px;
+    width: auto;
+    padding-top: 50px;
   }
 }

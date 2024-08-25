@@ -27,8 +27,8 @@ export const StatisticTracker = () => {
 
 	return (
 		<div className="statistic-tracker">
-			<NavigationComponent />
 			<HeaderActive />
+			<NavigationComponent />
 			<PullToRefresh onTrigger={handleRefresh} />
 			<div className="statistic-tracker__header">
 				<Back content="Статистика трекера" />
