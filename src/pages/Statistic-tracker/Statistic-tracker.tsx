@@ -13,6 +13,7 @@ import { PullToRefresh } from "../../Components/PullToRefresh/PulltoRefresh";
 import { NavigationComponent } from "../../Components/Navigation/Navigation-component";
 import HeaderActive from "../../Components/Header-active/Header-active";
 import { Back } from "../../Components/Back/Back";
+import { HeaderTwo } from "../../Components/Header-two/Header-two";
 
 export const StatisticTracker = () => {
 	const namesTabsDynamics = ["Сон", "Вода", "Фрукты"];
@@ -30,12 +31,10 @@ export const StatisticTracker = () => {
 			<HeaderActive />
 			<NavigationComponent />
 			<PullToRefresh onTrigger={handleRefresh} />
-			<div className="statistic-tracker__header">
-				<Back content="Статистика трекера" />
-			</div>
-			{/* <Header title='Статистика трекера' /> */}
+
 			<div className="statistic-tracker__main-wrapper">
-				<>
+				<HeaderTwo title="Статистика трекера" marginBottom={20} />
+				<div className="statistic-tracker__statistics">
 					<div className="statistic-tracker__calendar">
 						<ReactDatePicker
 							selected={startDate}
@@ -72,7 +71,7 @@ export const StatisticTracker = () => {
 							</TabContent>
 						</div>
 					</div>
-				</>
+				</div>
 			</div>
 		</div>
 	);

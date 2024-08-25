@@ -8,20 +8,18 @@
 
 	&__main-wrapper {
 		position: relative;
-		// padding-top: 140px;
+		margin: 70px 200px;
+
+		@media (max-width: 768px) {
+			margin: auto;
+		}
+	}
+	&__statistics {
 		display: flex;
-		width: 828px;
-		height: 700px;
-		margin: 0 auto;
 		justify-content: space-between;
 
 		@media (max-width: 768px) {
-			width: 700px;
-		}
-
-		@media (max-width: 500px) {
 			display: block;
-			width: auto;
 		}
 	}
 
