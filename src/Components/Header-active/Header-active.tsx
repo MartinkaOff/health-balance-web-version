@@ -17,11 +17,11 @@ import { Capacitor } from "@capacitor/core";
 import logo from "../../assets/image/Logo-noText.svg";
 import { useLocation } from "react-router-dom";
 
-// interface IHeaderActive {
-//   transparent: boolean
-// }
+interface IHeaderActive {
+	title?: string;
+}
 
-const HeaderActive = () => {
+const HeaderActive: FC<IHeaderActive> = ({ title }) => {
 	const dataUser = useAppSelector(dataUserSelector);
 	const balance = useAppSelector(balanceSelector);
 	const statusBar = useAppSelector(heightStatusBarSelector);
@@ -82,6 +82,8 @@ const HeaderActive = () => {
 							/>
 						</div>
 					)}
+
+					<div className="header-active__title">{title}</div>
 
 					<div className="header-active__column header-active__column-links">
 						{/* {transparent ? (

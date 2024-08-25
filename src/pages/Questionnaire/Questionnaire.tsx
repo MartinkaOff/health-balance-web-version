@@ -32,6 +32,7 @@ import { ISaveCurrentResult } from "../../models/IHealthIndex";
 import { dataUserSelector } from "../../Redux/slice/profileSlice";
 import { Back } from "../../Components/Back/Back";
 import HeaderActive from "../../Components/Header-active/Header-active";
+import { HeaderTwo } from "../../Components/Header-two/Header-two";
 
 export const Questionnaire = () => {
 	const dispatch = useAppDispatch();
@@ -186,8 +187,10 @@ export const Questionnaire = () => {
 					<div>
 						{questionnaire.length ? (
 							<div>
-								{/* <Header title={'Анкета #' + (progressPoll + 1)} /> */}
-								<Back content={"Анкета #" + (progressPoll + 1)} />
+								<HeaderTwo
+									title={"Анкета #" + (progressPoll + 1)}
+									marginBottom={20}
+								/>
 								<div className="questionnaire-page__progress-bar">
 									<div className="questionnaire-page__progress-value">
 										{answers.length + 1} /{" "}
