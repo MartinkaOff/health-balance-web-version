@@ -21,6 +21,7 @@ import {
 import HeaderActive from "../../Components/Header-active/Header-active";
 import { Back } from "../../Components/Back/Back";
 import { HeaderChallengeIcon } from "../../Components/Challenge/Header-challenge-icon";
+import { HeaderTwo } from "../../Components/Header-two/Header-two";
 
 export const ActiveChallengePage = () => {
 	const params = useParams();
@@ -61,17 +62,13 @@ export const ActiveChallengePage = () => {
 		<div className={"active-challenge-page"}>
 			<HeaderActive />
 			<PullToRefresh onTrigger={handleRefresh} />
-			{/* <Header
-                title={'Челлендж'}
-                customClass={transparentHeader ? 'active-challenge-page__header' : ''}
-            /> */}
 
 			{getChallengeLoading ? (
 				<Preloader height={"auto"} />
 			) : (
 				<>
 					<div className="active-challenge-page__main">
-						<Back content="Челлендж" />
+						<HeaderTwo title={"Челлендж"} marginBottom={20} />
 						<div className="active-challenge-page__wrapper">
 							<div>
 								<HeaderChallengeIcon image={challenge?.image || ""} />

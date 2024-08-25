@@ -13,6 +13,7 @@ import {
 import { Preloader } from "../../Components/Preloader/Preloader";
 import HeaderActive from "../../Components/Header-active/Header-active";
 import { Back } from "../../Components/Back/Back";
+import { HeaderTwo } from "../../Components/Header-two/Header-two";
 
 export const MotivationPage = () => {
 	const params = useParams();
@@ -49,14 +50,14 @@ export const MotivationPage = () => {
 			<HeaderActive />
 			<div className={"motivation-page"}>
 				<PullToRefresh onTrigger={handleRefresh} />
-				<Back content={conversionCategory(news?.category || 0)} />
-				<div
-					style={{
-						position: "relative",
-						display: "flex",
-						justifyContent: "center",
-					}}
-				>
+
+				<div>
+					<div style={{ margin: "20px 0" }}>
+						<HeaderTwo
+							title={conversionCategory(news?.category || 0)}
+							marginBottom={20}
+						/>
+					</div>
 					<div>
 						{isLoading ? (
 							<Preloader height={"auto"} />

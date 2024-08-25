@@ -24,6 +24,7 @@ import { useGetProfileQuery } from "../../services/user.api";
 import { Preloader } from "../../Components/Preloader/Preloader";
 import HeaderActive from "../../Components/Header-active/Header-active";
 import { Back } from "../../Components/Back/Back";
+import { HeaderTwo } from "../../Components/Header-two/Header-two";
 
 export const Profile = () => {
 	const balance = useAppSelector(balanceSelector);
@@ -70,9 +71,7 @@ export const Profile = () => {
                 Мой профиль
               </div>
             </div> */}
-						<div className="profile__header-back">
-							<Back content={"Мой профиль"} />
-						</div>
+						<HeaderTwo title={"Мой профиль"} marginBottom={20} />
 						<div className="profile__block">
 							<div className="profile__header">
 								<div className="profile__avatar">

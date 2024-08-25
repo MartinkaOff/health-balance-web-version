@@ -1,11 +1,7 @@
 @import "src/assets/style/variables";
 
 .motivation-page {
-  padding-top: 50px;
 
-  @media(max-width: 500px) {
-    padding-top: 100px;
-  }
 
   &__card {
     margin: 0 0 27px 0;
